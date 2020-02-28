@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
+using Microsoft.MixedReality.Toolkit.Experimental.UnityAR;
 using Microsoft.MixedReality.Toolkit.SpatialAwareness;
 using Microsoft.MixedReality.Toolkit.Utilities;
 using UnityEngine;
@@ -8,7 +9,8 @@ using UnityEngine;
 namespace Microsoft.MixedReality.Toolkit.UnityAR
 {
     /// <summary>
-    /// 
+    /// Spatial awareness system observer which provides applications using Unity AR Foundation with 
+    /// planar surfaces representing the environment.
     /// </summary>
     [MixedRealityDataProvider(
         typeof(IMixedRealitySpatialAwarenessSystem),
@@ -18,7 +20,7 @@ namespace Microsoft.MixedReality.Toolkit.UnityAR
         "MixedRealityToolkit.SDK")]
     [HelpURL("https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html")]
     public class UnityARSpatialPlaneObserver :
-        BaseSpatialObserver,    // todo: Create base plane observer?
+        BaseSpatialObserver,
         IMixedRealityCapabilityCheck
     {
         /// <summary>
@@ -33,22 +35,86 @@ namespace Microsoft.MixedReality.Toolkit.UnityAR
             string name = null,
             uint priority = DefaultPriority,
             BaseMixedRealityProfile profile = null) : base(spatialAwarenessSystem, name, priority, profile)
-        {
-            ReadProfile();
-        }
+        { }
 
+        /// <summary>
+        /// Reads the contents of the configuration profile.
+        /// </summary>
         private void ReadProfile()
         {
             if (ConfigurationProfile == null)
             {
-                // todo: Debug.LogWarning("A profile was not specified for the Unity AR Spatial Planes observer.");
+                Debug.LogWarning("A profile was not specified for the Unity AR Spatial Planes observer.");
                 return;
             }
 
             // todo
+            // detection mode
+            // horizontal plane material
+            // vertical plane material
         }
 
-        // todo
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        //public ArPlaneDetectionMode DetectionMode
+        //{ get; set; }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Material HorizontalPlaneMaterial
+        { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Material VerticalPlaneMaterial
+        { get; set; }
+
+        #region IMixedRealitySpatialObserver
+
+        /// <inheritdoc />
+        public override void Resume()
+        {
+            base.Resume();
+            // todo
+        }
+
+        /// <inheritdoc />
+        public override void Suspend()
+        {
+            base.Suspend();
+            // todo
+        }
+
+        #endregion IMixedRealitySpatialObserver
+
+        #region IMixedRealityDataProvider
+
+        public override void Initialize()
+        {
+            /// <inheritdoc />
+            base.Initialize();
+            ReadProfile();
+        }
+
+        /// <inheritdoc />
+        public override void Disable()
+        {
+            base.Disable();
+            // todo
+        }
+
+        /// <inheritdoc />
+        public override void Enable()
+        {
+            base.Enable();
+            // todo
+        }
+
+        #endregion IMixedRealityDataProvider
 
         #region IMixedRealityCapabilityCheck
 

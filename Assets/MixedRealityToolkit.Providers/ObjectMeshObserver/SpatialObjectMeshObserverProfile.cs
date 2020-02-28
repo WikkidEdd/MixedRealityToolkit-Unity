@@ -10,7 +10,7 @@ namespace Microsoft.MixedReality.Toolkit.SpatialObjectMeshObserver
     /// <summary>
     /// Configuration profile for the spatial object mesh observer.
     /// </summary>
-    [CreateAssetMenu(menuName = "Mixed Reality Toolkit/Profiles/Spatial Object Mesh Observer Profile", fileName = "SpatialObjectMeshObserverProfile", order = 100)]
+    [CreateAssetMenu(menuName = "Mixed Reality Toolkit/Providers/Spatial Object Mesh Observer Profile", fileName = "SpatialObjectMeshObserverProfile", order = 100)]
     public class SpatialObjectMeshObserverProfile : MixedRealitySpatialAwarenessMeshObserverProfile
     {
         [SerializeField]
