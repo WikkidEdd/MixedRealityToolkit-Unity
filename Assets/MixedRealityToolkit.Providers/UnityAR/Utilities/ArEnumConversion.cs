@@ -3,6 +3,7 @@
 
 #if ARFOUNDATION_PRESENT
 using UnityEngine.SpatialTracking;
+using UnityEngine.XR.ARFoundation;
 #endif // ARFOUNDATION_PRESENT
 
 namespace Microsoft.MixedReality.Toolkit.Experimental.UnityAR
@@ -90,6 +91,35 @@ namespace Microsoft.MixedReality.Toolkit.Experimental.UnityAR
                     return (TrackedPoseDriver.UpdateType)((int)updateType);
             }
         }
+
+        ///// <summary>
+        ///// Converts from an <see cref="PlaneType"/> to a Unity PlaneDetectionMode value.
+        ///// </summary>
+        ///// <param name="planeType">Value to convert.</param>
+        ///// <returns>
+        ///// Unity plane detections flags equivalent of the <see cref="ArPlaneManagerDetectionMode"/>.
+        ///// </returns>
+        //public static PlaneDetectionMode ToUnityPlaneDetectionFlags(PlaneType planeType)
+        //{
+        //    // Check for no flags and all flags.    
+        //    if (((int)planeType == 0) ||
+        //        ((int)planeType == (-1)))
+        //    {
+        //        // Pass the value through.
+        //        return (PlaneDetectionMode)(int)planeType;
+        //    }
+
+        //    PlaneDetectionmodes mode = 0;
+        //    if ((planeType && PlaneType.Horizontal) != 0)
+        //    {
+
+        //    }
+        //    if ((planeType && PlaneType.Vertical) != 0)
+        //    {
+        //    }
+
+        //    return flags;
+        //}
 #endif // ARFOUNDATION_PRESENT
     }
 }
