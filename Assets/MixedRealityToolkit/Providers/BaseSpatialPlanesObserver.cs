@@ -1,6 +1,9 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
+using System.Collections.Generic;
+using UnityEngine;
+
 namespace Microsoft.MixedReality.Toolkit.SpatialAwareness
 {
     /// <summary>
@@ -21,6 +24,17 @@ namespace Microsoft.MixedReality.Toolkit.SpatialAwareness
             uint priority = DefaultPriority,
             BaseMixedRealityProfile profile = null) : base(spatialAwarenessSystem, name, priority, profile)
         { }
+
+        // todo
+        
+        public IReadOnlyDictionary<int, SpatialAwarenessPlanarObject> Planes => throw new System.NotImplementedException();
+
+        public PlaneType PlaneTypes { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+        public int PlanePhysicsLayer { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+
+        public int PlanePhysicsLayerMask => throw new System.NotImplementedException();
+
+        public Material OcclusionMaterial { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
         // todo
     }
