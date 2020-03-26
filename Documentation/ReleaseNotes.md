@@ -2,6 +2,7 @@
 
 - [What's new](#whats-new-in-240)
 - [Known issues](#known-issues-in-240)
+- [Breaking changes](#breaking-changes-in-240)
 - [Updating guidance](Updating.md#updating-230-to-240)
 
 This release of the Microsoft Mixed Reality Toolkit supports the following devices and platforms.
@@ -29,9 +30,46 @@ If importing the [Mixed Reality Toolkit NuGet packages](MRTKNuGetPackage.md), th
 
 ### What's new in 2.4.0
 
+**MRTK folder layout changes**
+
+This version of MRTK modifies the layout of the MRTK folder structure. This change encapsulates all MRTK code into a single folder hierarchy and reduces the total path length of all MRTK files.
+
+| Previous Folder | New Folder |
+| --- | --- |
+| MixedRealityToolkit | MRTK\Core |
+| MixedRealityToolkit.Examples | MRTK\Examples |
+| MixedRealityToolkit.Extensions | MRTK\Extensions |
+| MixedRealityToolkit.Providers | MRTK\Providers |
+| MixedRealityToolkit.SDK | MRTK\SDK |
+| MixedRealityToolkit.Services | MRTK\Services |
+| MixedRealityToolkit.Tests | MRTK\Tests |
+| MixedRealityToolkit.Tools | MRTK\Tools |
+
+> [!IMPORTANT]
+> The `MixedRealityToolkit.Generated` contains customer generated files and remains unchanged.
+
+
 **WindowsApiChecker: IsMethodAvailable(), IsPropertyAvailable() and IsTypeAvailable()**
 
-This version of MRTK adds three new methods to the `WindowsApiChecker` class: `IsMethodAvailable`, `IsPropertyAvailable` and `IsTypeAvailable`. These methods allow for checking for feature support on Windows 10 and are prefered over using the `UniversalApiContractV#_IsAvailable` properties.
+This version of MRTK adds three new methods to the [`WindowsApiChecker`](xref:Microsoft.MixedReality.Toolkit.Windows.Utilities.WindowsApiChecker) class: `IsMethodAvailable`, `IsPropertyAvailable` and `IsTypeAvailable`. These methods allow for checking for feature support on Windows 10 and are prefered over using the `UniversalApiContractV#_IsAvailable` properties.
+
+
+**Helpers to get text input fields working with MixedRealityKeyboard for UnityUI, TextMeshPro (Experimental)**
+
+<img src="https://user-images.githubusercontent.com/168492/77582981-86e07800-6e9d-11ea-86e5-bf2c0840296c.png" width="300" />
+
+We have introduced two helper components, [`UI_KeyboardInputField`](xref:Microsoft.MixedReality.Toolkit.Experimental.UI.UI_KeyboardInputField) and [`TMP_KeyboardInputField`](xref:Microsoft.MixedReality.Toolkit.Experimental.UI.TMP_KeyboardInputField) that can be added to text input fields in Unity UI to enable the HoloLens 2 and Windows Mixed Reality Keyboard to show up when the fields are clicked.
+
+For more information, see - [Mixed Reality Keyboard Helpers](../Assets/MRTK/SDK/Experimental/MixedRealityKeyboard/README_MixedRealityKeyboard.md).
+
+
+### Breaking changes in 2.4.0
+
+**Eye gaze setup change**
+
+This version of MRTK modifies the steps required for eye gaze setup. The _'IsEyeTrackingEnabled'_ checkbox can be found in the gaze settings of the input pointer profile. Checking this box will enable eye based gaze, rather then the default head based gaze.
+
+For more information on these changes and complete instructions for eye tracking setup, please see the [eye tracking](EyeTracking/EyeTracking_BasicSetup.md) article.
 
 ### Known issues in 2.4.0
 
