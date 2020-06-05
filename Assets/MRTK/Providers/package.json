@@ -1,9 +1,9 @@
 {
-    "name": "com.microsoft.mixedreality.toolkit.tools",
-    "displayName": "Mixed Reality Toolkit Tools",
+    "name": "com.microsoft.mixedreality.toolkit.providers",
+    "displayName": "Mixed Reality Toolkit Providers",
     "version": "2.4.0-preview.3",
-    "unity": "2019.4",
-    "description": "Tools for the Microsoft Mixed Reality Toolkit",
+    "unity": "2018.4",
+    "description": "Components providing platform support for the Microsoft Mixed Reality Toolkit",
     "keywords": [
         "mrtk",
         "microsoft",

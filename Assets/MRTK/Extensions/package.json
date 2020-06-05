@@ -1,7 +1,7 @@
 {
     "name": "com.microsoft.mixedreality.toolkit.extensions",
     "displayName": "Mixed Reality Toolkit Extensions",
-    "version": "2.4.0",
+    "version": "2.4.0-preview.3",
     "unity": "2018.4",
     "description": "Extension services for the Microsoft Mixed Reality Toolkit",
     "keywords": [
@@ -23,6 +23,6 @@
         "url": "https://github.com/microsoft/MixedRealityToolkit-Unity/issues"
       },
     "dependencies": {
-        "com.microsoft.mixedreality.toolkit": "2.4.0"
+        "com.microsoft.mixedreality.toolkit.foundation": "2.4.0-preview.3"
     }
 }
