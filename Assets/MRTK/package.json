@@ -1,7 +1,7 @@
 {
     "name": "com.microsoft.mixedreality.toolkit.foundation",
     "displayName": "Mixed Reality Toolkit Foundation",
-    "version": "2.4.0-preview.3",
+    "version": "2.4.0-preview.20",
     "unity": "2018.4",
     "description": "MRTK-Unity provides a set of foundational components and features to accelerate MR app development in Unity. The latest Release of MRTK (V2) supports HoloLens/HoloLens 2, Windows Mixed Reality, OpenVR, mobile AR amd Leap Motion platforms.",
     "keywords": [
@@ -25,6 +25,7 @@
     "dependencies": {},
     "files": [
         "Core*",
+        "Providers*",
         "SDK*",
         "Services*",
         "package.json.meta"
